@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/catalogo_screen.dart';
 
-void main() {
-  runApp(const MeuApp());
-}
+import 'screens/feed_noticias_screen.dart';
+
+void main() => runApp(const MeuApp());
 
 class MeuApp extends StatelessWidget {
   const MeuApp({super.key});
@@ -11,13 +10,10 @@ class MeuApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Catálogo Dinâmico Multi-Telas',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: Colors.blue,
-      ),
-      home: const CatalogoScreen(),
+      title: 'Aula 10 - Listas e APIs',
+      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.teal),
+      home: const FeedNoticiasScreen(),
     );
   }
 }
